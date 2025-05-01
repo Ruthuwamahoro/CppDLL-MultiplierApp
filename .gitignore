@@ -1,0 +1,60 @@
+# VS Code files
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# C++ build outputs
+MathLibrary/build/
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.exe
+
+# .NET build outputs
+MathClient/bin/
+MathClient/obj/
+*.dll
+*.pdb
+*.user
+*.userosscache
+*.userprefs
+*.suo
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+bin
+# Ignore build outputs
+bin/
+obj/
+*.exe
+*.dll
+*.lib
+*.exp
+*.pdb
+
+# Visual Studio files
+.vs/
+.vscode/
+*.user
+*.suo
+
+# OS files
+Thumbs.db
+.DS_Store
+build
+build/*.dll
+build/*.exe
+build/*.obj
