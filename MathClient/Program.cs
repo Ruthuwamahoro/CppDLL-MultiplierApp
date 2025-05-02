@@ -6,14 +6,8 @@ namespace MathClient
 {
     class Program
     {
-        // Import the DLL function
-        // For Windows
         [DllImport("MathLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
         private static extern int Multiply(int a, int b);
-
-        // For Linux/macOS (uncomment if needed)
-        // [DllImport("libMathLibrary.so", CallingConvention = CallingConvention.Cdecl)]
-        // private static extern int Multiply(int a, int b);
         
         static void Main(string[] args)
         {
@@ -22,7 +16,6 @@ namespace MathClient
                 Console.WriteLine("C# Console Application calling C++ DLL");
                 Console.WriteLine("--------------------------------------");
                 
-                // Ask the user for two numbers
                 Console.Write("Enter the first number: ");
                 if (!int.TryParse(Console.ReadLine(), out int number1))
                 {
@@ -37,11 +30,9 @@ namespace MathClient
                     number2 = 7;
                 }
                 
-                // Call the DLL function
                 Console.WriteLine($"Calling C++ DLL to multiply {number1} and {number2}...");
                 int result = Multiply(number1, number2);
                 
-                // Display the result
                 Console.WriteLine($"Result from C++ DLL: {number1} * {number2} = {result}");
             }
             catch (DllNotFoundException)
